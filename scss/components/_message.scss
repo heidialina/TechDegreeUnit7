@@ -1,0 +1,17 @@
+/* CSS Document */
+
+#userField, 
+#messageField,
+#send {
+	width: 100%;
+	border-radius: 5px; 
+}
+
+#userField {
+	margin-bottom: 10px;
+}
+
+#send {
+	background-color: #dfffd6;
+	@include button; 
+}

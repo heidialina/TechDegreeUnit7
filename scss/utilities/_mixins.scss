@@ -1,0 +1,26 @@
+/* CSS Document */
+
+@mixin media ($mediaq) {
+	@if $mediaq == break-l {
+		@media #{$break-l} { 
+			@content;
+	  }
+	}
+	@else if $mediaq == break-s {
+		@media #{$break-s} {
+			@content;
+		}
+	}
+}
+
+@mixin button {
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 6px 12px;
+	font-size: 1.4em;
+	border-radius: 3px;
+	border: 1px solid transparent;
+	box-shadow: 3px 3px 10px 4px #ccc;
+}

@@ -1,0 +1,64 @@
+/* CSS Document */
+
+// Full page grid
+
+.grid-container {
+	display: grid; 
+	height: 100vh;
+	grid-template-columns: 100%;
+	grid-template-rows: auto; 
+	grid-template-areas: 
+		"header"
+		"navigation"
+		"main";
+}
+
+.header {
+	grid-area: header;
+}
+
+.navigation {
+	grid-area: navigation;
+}
+
+.main {
+	grid-area: main;
+}
+
+@media (min-width: 768px) {
+	.grid-container {
+		grid-template-columns: 75px 1fr;
+	}
+	
+	.main {
+		display: grid;
+		grid-template-columns: 50%;
+	}
+	
+	.header,
+	.alert,
+	.traffic,
+	.social-media {
+		grid-column: 1 / 2;
+	}
+	
+	.daily-traffic,
+	.members,
+	.message {
+		grid-column: 1 / 1;
+	}
+	
+	.mobile-users,
+	.recent-activity,
+	.settings {
+		grid-column: 2 / 1;
+	}
+	
+	.widget-full {
+		width: 90vw;
+	}
+	
+	.widget-half {
+		width: 34vw;
+	}
+}

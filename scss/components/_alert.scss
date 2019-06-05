@@ -1,0 +1,17 @@
+/* CSS Document */
+
+// #alert .close-alert
+
+#alert {
+	background-color: $peach;
+	border-radius: 10px;
+	margin: auto 10px;
+	padding: 2px 10px;
+	display: flex;
+}
+
+.close-alert {
+	align-content: flex-end;
+	border: none;
+	background-color: transparent;
+}

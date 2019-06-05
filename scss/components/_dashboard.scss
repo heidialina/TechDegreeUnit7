@@ -1,0 +1,18 @@
+/* CSS Document */
+
+// dashboard 
+
+.dashboard {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+// search
+
+#dashboard-search {
+	border: none;
+	box-shadow: 1px 1px 5px 5px $mint;
+	width: 100px;
+	margin-top: 20px;
+}

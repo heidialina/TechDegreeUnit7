@@ -1,0 +1,21 @@
+/* CSS Document */
+
+.navigation {
+	background-color: $lilac; 
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20%;
+	height: 60px;
+	//@include media (break-l) {
+	//	display: flex;
+	//	flex-direction: column;
+	//}
+}
+
+.icon-nav {
+	width: 40px;
+	&:hover {
+		border-top: 2px solid $mint;
+		padding-top: 4px;
+	}
+}
