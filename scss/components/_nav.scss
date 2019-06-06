@@ -9,6 +9,8 @@
 	@include media (break-l) {
 		display: flex;
 		flex-direction: column;
+		height: 100%;
+		justify-content: flex-start;
 	}
 }
 
@@ -17,5 +19,13 @@
 	&:hover {
 		border-top: 2px solid $mint;
 		padding-top: 4px;
+	}
+	@include media (break-l) {
+		margin-bottom: 20px;
+		&:hover {
+			border-top: none; 
+			border-left: 2px solid $mint;
+			padding-left: 4px;
+		}
 	}
 }

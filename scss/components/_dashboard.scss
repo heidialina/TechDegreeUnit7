@@ -5,14 +5,20 @@
 .dashboard {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 // search
 
 #dashboard-search {
-	border: none;
-	box-shadow: 1px 1px 5px 5px $mint;
-	width: 100px;
-	margin-top: 20px;
+	border: 1px solid $blue;
+	border-radius: 20px;
+	box-shadow: 2px 2px 5px 5px $mint;
+	width: 150px;
+	padding: 5px;
+	margin-top: 15px;
+	@include media (break-l) {
+		width: 400px;
+		background-color: red;
+	}
 }

@@ -1,31 +1,32 @@
 /* CSS Document */
 
 .toggle-switch {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+	font-weight: 300;
 }
 
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 70px;
-  height: 34px;
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	height: 34px;
 }
 
 .switch input {
-  display: none;
+	display: none;
 }
 
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: $peach;
-  transition: .5s;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+ 	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $peach;
+	transition: .5s;
 }
 
 .slider:before {
@@ -40,7 +41,7 @@
 }
 
 input:checked + .slider {
-  background-color: $lilac;
+	background-color: $lilac;
 }
 
 input:checked + .slider:before {
@@ -88,6 +89,7 @@ input:checked + .slider:after {
 #cancel {
 	width: 49%; 
 	margin-bottom: 20px;
+	color: white;
 	@include button; 
 }
 

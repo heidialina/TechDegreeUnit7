@@ -6,8 +6,8 @@
 			@content;
 	  }
 	}
-	@else if $mediaq == break-s {
-		@media #{$break-s} {
+	@else if $mediaq == break-xl {
+		@media #{$break-xl} {
 			@content;
 		}
 	}

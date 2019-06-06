@@ -1,12 +1,24 @@
+// active 
+
+var trafficNav = document.getElementById("traffic-nav");
+var selected = trafficNav.getElementsByClassName("list");
+for (var i = 0; i < selected.length; i++) {
+  selected[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
 // Close alert
 
-const alert = document.getElementById('alert');
+/*const alert = document.getElementById('alert');
 alert.addEventListener('click', e => {
 	const element = e.target;
 	if (element.classList.contains('close-alert')) {
 		alert.style.display = 'none';
 	}
-});
+});*/
 
 // traffic widget 
 

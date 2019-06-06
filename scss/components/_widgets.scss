@@ -1,0 +1,26 @@
+/* CSS Document */
+
+.traffic {
+	@include media (break-l) {
+		width: 88vw;
+	}
+}
+
+.traffic ul {
+	display: flex; 
+	flex-direction: row;
+}
+
+.traffic li {
+	margin-left: auto;
+	padding: 5px 10px;
+	border-radius: 20px;
+	cursor: pointer;
+	&:hover {
+		background-color: $blue; 
+	}
+}
+
+.active {
+	background-color: $blue;
+}

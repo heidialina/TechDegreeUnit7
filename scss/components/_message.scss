@@ -7,11 +7,17 @@
 	border-radius: 5px; 
 }
 
-#userField {
+.message input,
+.message textarea {
+	border: 1px solid $blue;
+	border-radius: 20px;
+	box-shadow: 2px 2px 5px 5px $mint;
 	margin-bottom: 10px;
+	padding: 10px;
 }
 
 #send {
 	background-color: #dfffd6;
+	color: white;
 	@include button; 
 }
