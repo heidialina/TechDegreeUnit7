@@ -361,24 +361,31 @@ template {
   font-family: 'Wire One', sans-serif;
   max-width: 100vw; }
 
-/* line 21, ../scss/base/_base.scss */
+@media (min-width: 768px) {
+  /* line 21, ../scss/base/_base.scss */
+  .vl2 {
+    border-left: 2px solid #FFD7D5;
+    height: 80px;
+    margin: auto 5px; } }
+
+/* line 29, ../scss/base/_base.scss */
 body {
   margin: auto; }
 
-/* line 25, ../scss/base/_base.scss */
+/* line 33, ../scss/base/_base.scss */
 li {
   list-style-type: none; }
 
-/* line 29, ../scss/base/_base.scss */
+/* line 37, ../scss/base/_base.scss */
 a {
   text-decoration: none; }
 
-/* line 33, ../scss/base/_base.scss */
+/* line 41, ../scss/base/_base.scss */
 main {
   width: 95%;
   margin: auto; }
 
-/* line 38, ../scss/base/_base.scss */
+/* line 46, ../scss/base/_base.scss */
 h2,
 h3 {
   font-weight: 300; }
@@ -421,56 +428,56 @@ h3 {
     grid-row: 2/ span 2; }
 
   /* line 46, ../scss/components/_grid.scss */
+  .dashboard {
+    grid-column: 1/ span 2; }
+
+  /* line 50, ../scss/components/_grid.scss */
   .header,
   .alert,
   .traffic,
   .social-media {
     grid-column: 1 / span 2; }
 
-  /* line 53, ../scss/components/_grid.scss */
+  /* line 57, ../scss/components/_grid.scss */
   .daily-traffic,
   .members,
   .message {
     grid-column: 1 / span 1; }
 
-  /* line 59, ../scss/components/_grid.scss */
+  /* line 63, ../scss/components/_grid.scss */
   .mobile-users,
   .recent-activity,
   .settings {
     grid-column: 2 / span 1; }
 
-  /* line 65, ../scss/components/_grid.scss */
-  .widget-full {
-    width: 78vw; }
-
   /* line 69, ../scss/components/_grid.scss */
+  .widget-full {
+    width: 88vw; }
+
+  /* line 73, ../scss/components/_grid.scss */
   .widget-half {
-    width: 42vw; } }
+    width: 40vw; } }
 /* CSS Document */
-@media (min-width: 768px) {
-  /* line 3, ../scss/components/_widgets.scss */
-  .traffic {
-    width: 88vw; } }
+/*.traffic ul {
+	display: flex; 
+	flex-direction: row;
+}
 
-/* line 9, ../scss/components/_widgets.scss */
-.traffic ul {
-  display: flex;
-  flex-direction: row; }
-
-/* line 14, ../scss/components/_widgets.scss */
 .traffic li {
-  margin-left: auto;
-  padding: 5px 10px;
-  border-radius: 20px;
-  cursor: pointer; }
-  /* line 19, ../scss/components/_widgets.scss */
-  .traffic li:hover {
-    background-color: #DFFFD6; }
+	margin-left: auto;
+	padding: 5px 10px;
+	border-radius: 20px;
+	cursor: pointer;
+	&:hover {
+		background-color: $blue; 
+	}
+}
 
-/* line 24, ../scss/components/_widgets.scss */
 .active {
-  background-color: #DFFFD6; }
+	background-color: $blue;
+}
 
+*/
 /* CSS Document */
 /* line 3, ../scss/components/_header.scss */
 .header {
@@ -494,26 +501,36 @@ h3 {
   transition: transform 0.2s linear; }
   /* line 22, ../scss/components/_header.scss */
   .icon-header:hover {
-    transform: rotate(30deg); }
+    transform: rotate(30deg);
+    cursor: pointer; }
 
-/* line 27, ../scss/components/_header.scss */
+/* line 28, ../scss/components/_header.scss */
 .vl {
   border-left: 2px solid #F3FFE1;
   height: 40px;
   margin: auto 5px; }
 
-/* line 33, ../scss/components/_header.scss */
+/* line 34, ../scss/components/_header.scss */
 .profile-image {
   border-radius: 50%;
   width: 40px;
   height: 40px;
   margin: auto 5px; }
 
-/* line 40, ../scss/components/_header.scss */
+/* line 41, ../scss/components/_header.scss */
 .username {
   color: white;
   font-weight: 100;
   padding-left: 5px; }
+
+/* line 47, ../scss/components/_header.scss */
+.badge {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: #F3FFE1; }
 
 /* CSS Document */
 /* line 3, ../scss/components/_nav.scss */
@@ -566,8 +583,7 @@ h3 {
   @media (min-width: 768px) {
     /* line 13, ../scss/components/_dashboard.scss */
     #dashboard-search {
-      width: 400px;
-      background-color: red; } }
+      width: 400px; } }
 
 /* CSS Document */
 /* The alert message box */
@@ -601,36 +617,50 @@ h3 {
   display: flex;
   flex-direction: column;
   margin-top: 20px; }
+  @media (min-width: 768px) {
+    /* line 3, ../scss/components/_some.scss */
+    .social-media-info {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%; } }
 
-/* line 9, ../scss/components/_some.scss */
+/* line 14, ../scss/components/_some.scss */
 .some-container {
   display: flex;
   flex-direction: row;
   padding: 5px; }
 
-/* line 15, ../scss/components/_some.scss */
+/* line 20, ../scss/components/_some.scss */
 .some-text {
   margin: auto;
   display: inline-block;
   width: 100px; }
+  @media (min-width: 768px) {
+    /* line 20, ../scss/components/_some.scss */
+    .some-text {
+      margin-left: 10px; } }
 
-/* line 21, ../scss/components/_some.scss */
+/* line 29, ../scss/components/_some.scss */
 .platform {
   color: #7BDFF2;
   font-weight: bold; }
 
-/* line 26, ../scss/components/_some.scss */
+/* line 34, ../scss/components/_some.scss */
 .facebook {
   border: 2px solid #FFD7D5;
   border-left: none;
   border-right: none; }
+  @media (min-width: 768px) {
+    /* line 34, ../scss/components/_some.scss */
+    .facebook {
+      border: none; } }
 
-/* line 32, ../scss/components/_some.scss */
+/* line 43, ../scss/components/_some.scss */
 .followers {
   font-size: 20px;
   font-weight: 200; }
 
-/* line 37, ../scss/components/_some.scss */
+/* line 48, ../scss/components/_some.scss */
 .some-image {
   background-color: #FFD3E8;
   width: 70px;
@@ -639,7 +669,7 @@ h3 {
   border-radius: 50%;
   margin: auto 0; }
 
-/* line 47, ../scss/components/_some.scss */
+/* line 58, ../scss/components/_some.scss */
 .icon-some {
   width: 50px;
   height: 50px;
@@ -711,9 +741,14 @@ h3 {
   padding: 10px; }
 
 /* line 19, ../scss/components/_message.scss */
+.message textarea {
+  height: 140px; }
+
+/* line 23, ../scss/components/_message.scss */
 #send {
   background-color: #dfffd6;
   color: white;
+  margin-top: auto;
   display: inline-block;
   text-align: center;
   text-transform: uppercase;

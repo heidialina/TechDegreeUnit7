@@ -16,8 +16,13 @@
 	padding: 10px;
 }
 
+.message textarea {
+	height: 140px;
+}
+
 #send {
 	background-color: #dfffd6;
 	color: white;
+	margin-top: auto;
 	@include button; 
 }

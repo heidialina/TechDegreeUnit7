@@ -4,6 +4,11 @@
 	display: flex; 
 	flex-direction: column;
 	margin-top: 20px;
+	@include media (break-l) {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+	}
 }
 
 .some-container {
@@ -16,6 +21,9 @@
 	margin: auto;
 	display: inline-block;
 	width: 100px;
+	@include media (break-l) {
+		margin-left: 10px;
+	}
 }
 
 .platform {
@@ -27,6 +35,9 @@
 	border: 2px solid $peach;
 	border-left: none;
 	border-right: none;
+	@include media (break-l) {
+		border: none;
+	}
 }
 
 .followers {

@@ -43,6 +43,10 @@
 		grid-row: 2/ span 2;
 	}
 	
+	.dashboard {
+		grid-column: 1/ span 2;
+	}
+	
 	.header,
 	.alert,
 	.traffic,
@@ -63,10 +67,10 @@
 	}
 	
 	.widget-full {
-		width: 78vw;
+		width: 88vw;
 	}
 	
 	.widget-half {
-		width: 42vw;
+		width: 40vw;
 	}
 }

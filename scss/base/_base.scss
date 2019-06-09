@@ -18,6 +18,14 @@
 	max-width: 100vw;
 }
 
+.vl2 {
+	@include media (break-l)  {
+		border-left: 2px solid $peach;
+		height: 80px;
+		margin: auto 5px;
+	}
+}
+
 body {
 	margin: auto;
 }

@@ -1,12 +1,6 @@
 /* CSS Document */
 
-.traffic {
-	@include media (break-l) {
-		width: 88vw;
-	}
-}
-
-.traffic ul {
+/*.traffic ul {
 	display: flex; 
 	flex-direction: row;
 }
@@ -24,3 +18,5 @@
 .active {
 	background-color: $blue;
 }
+
+*/
