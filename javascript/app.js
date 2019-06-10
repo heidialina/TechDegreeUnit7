@@ -1,8 +1,8 @@
 // Alert notification 
 
 function showNotification() {
-	alert("Here is the first alert!");
-	alert("And second one just after!");
+	alert("Alert! Welcome to the Unit 7 project!\n\nAlert 2! Hope you enjoy!");
+	alert("So many hours went to this!");
 }
 
 // active 
@@ -19,8 +19,8 @@ function showNotification() {
 
 // traffic widget 
 
-var trafficChart = document.getElementById('traffic-chart');
-var trafficData = new Chart(trafficChart, {
+const trafficChart = document.getElementById('traffic-chart');
+const trafficData = new Chart(trafficChart, {
 	type: 'line',
 	data: {
 		labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -169,8 +169,8 @@ var trafficData = new Chart(trafficChart, {
 
 // daily traffic 
 
-var dailyTraffic = document.getElementById('daily-chart');
-var dailyData = new Chart(dailyTraffic, {
+const dailyTraffic = document.getElementById('daily-chart');
+const dailyData = new Chart(dailyTraffic, {
 	type: 'bar',
 	data: {
 		labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
@@ -214,8 +214,8 @@ var dailyData = new Chart(dailyTraffic, {
 
 // donut
 
-var mobileTraffic = document.getElementById('mobile-chart');
-var mobileData = new Chart(mobileTraffic, {
+const mobileTraffic = document.getElementById('mobile-chart');
+const mobileData = new Chart(mobileTraffic, {
 	type: 'doughnut',
 	data: {
 		labels: ['Phones', 'Tablets', 'Desktops'],
@@ -275,25 +275,30 @@ send.addEventListener('click', () => {
 // Saving settings to local storage
 
 (function() {
-    var boxes = document.querySelectorAll("input[type='checkbox']");
-    for (var i = 0; i < boxes.length; i++) {
-        var box = boxes[i];
-        if (box.hasAttribute("store")) {
-            setupBox(box);
-        }
-    }
-    
-    function setupBox(box) {
-        var storageId = box.getAttribute("store");
-        var oldVal    = localStorage.getItem(storageId);
-        console.log(oldVal);
-        box.checked = oldVal === "true" ? true : false;
-        
-        box.addEventListener("change", function() {
-            localStorage.setItem(storageId, this.checked); 
-        });
-    }
+	const boxes = document.querySelectorAll("input[type='checkbox']");
+	for (let i = 0; i < boxes.length; i++) {
+		const box = boxes[i];
+		if (box.hasAttribute("store")) {
+			setupBox(box);
+		}
+	}
+	
+	function setupBox(box) {
+		const storageId = box.getAttribute("store");
+		const oldVal    = localStorage.getItem(storageId);
+		console.log(oldVal);
+		box.checked = oldVal === "true" ? true : false;
+		
+		box.addEventListener("change", function() {
+			localStorage.setItem(storageId, this.checked); 
+		});
+	}
 })();
 
-//const emailNotification = document.getElementById('email_notif');
-// const publicProfile = document.getElementById('pub_profile');
+document.getElementById("timezone").onchange = function() {
+    localStorage.setItem('timezone', document.getElementById("timezone").value);
+}
+
+if (localStorage.getItem('timezone')) {
+    document.getElementById("timezone").options[localStorage.getItem('timezone')].selected = true;
+}
